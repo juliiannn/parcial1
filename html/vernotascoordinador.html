@@ -1,0 +1,49 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/vernotascoordinador.css">
+    <title>Notas de Estudiantes</title>  
+</head>  
+<body>
+    <header>
+        <div id="mensaje-bienvenida"></div>
+        <div class="logo">
+            <img src="../img/logo 1.jfif" alt="Logo de Instituciones Educativas">
+            <h1>Institucion Educativa</h1>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><input type="button" class="submenu" value="Regresar" onclick="regresar2()"></li>
+        </ul>
+    </nav>
+    <h1>Ver Notas</h1>
+    <div class="select-container">
+        <label for="grado">Seleccionar Grado:</label>
+        <select id="grado" onchange="filtrarEstudiantes()">
+            <option value="">-- Seleccionar Grado --</option>
+            <option value="6">6°</option>
+            <option value="7">7°</option>
+            <option value="8">8°</option>
+            <option value="9">9°</option>
+            <option value="10">10°</option>
+            <option value="11">11°</option>
+        </select>
+    </div>
+    
+    <h2>Estudiantes en el Grado Seleccionado</h2>
+    <div id="estudiantesContainer">
+        <div id="estudiantesList"></div>
+    </div>
+    <h2>Notas Registradas</h2>
+    <div id="notasRegistradas"></div>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2024 Gestión de Instituciones Educativas</p>
+    </footer>
+    <script src="../js/server.js"></script>
+</body>  
+</html>  

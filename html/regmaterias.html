@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Instituciones Educativas</title>
+    <link rel="stylesheet" href="../css/regmaterias.css">
+    
+</head>  
+<body>
+    <header>
+        <div id="mensaje-bienvenida"></div>
+        <div class="logo">
+            <img src="../img/logo 1.jfif" alt="Logo de Instituciones Educativas">
+            <h1>Institucion Educativa</h1>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><input type="button" class="submenu" value="Regresar" onclick="regresar2()"></li>
+        </ul>
+    </nav>
+    <h1>Registro de Materias</h1>
+
+    <div class="container">
+        <div class="matriculacion-form">
+            <form>
+                <div class="materia">
+                    <input type="text" id="materia" name="materia" placeholder="Materia" required>
+                </div>
+                <br>
+                <div class="materia">
+                    <label>Grados:</label>
+                    <div>
+                        <input type="checkbox" id="6" name="grado" value="6" required>
+                        <label for="6">Grado 6</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="7" name="grado" value="7">
+                        <label for="7">Grado 7</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="8" name="grado" value="8">
+                        <label for="8">Grado 8</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="9" name="grado" value="9">
+                        <label for="9">Grado 9</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="10" name="grado" value="10">
+                        <label for="10">Grado 10</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="11" name="grado" value="11">
+                        <label for="11">Grado 11</label>
+                    </div>
+                </div>
+                <br>
+                <input type="button" class="button" value="Matricular" onclick="matricular()">
+            </form>
+        </div>
+    </div>
+    
+    <h2>Materias Matriculadas:</h2>
+    <ul id="lista-materias"></ul>
+    <footer>
+        <p>&copy; 2024 Gestión de Instituciones Educativas</p>
+    </footer>
+    <script src="../js/server.js"></script>
+</body>  
+</html>  

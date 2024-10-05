@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Instituciones Educativas</title>
+    <link rel="stylesheet" href="../css/editarnotasdocente.css">
+</head>
+
+<body>
+    <header>
+        <div id="mensaje-bienvenida"></div>
+        <div class="logo">
+            <img src="../img/logo 1.jfif" alt="Logo de Instituciones Educativas">
+            <h1>Docente</h1>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><input type="button" class="submenu" value="Regresar" onclick="regresar3()"></li>
+        </ul>
+    </nav>
+    <h1>Filtrar Estudiantes por Grado y Registrar Notas</h1>
+    <div class="select-container">
+        <label for="grado">Seleccionar Grado:</label>
+        <select id="grado" onchange="filtrarEstudiantes()">
+            <option value="">-- Seleccionar Grado --</option>
+            <option value="6">6°</option>
+            <option value="7">7°</option>
+            <option value="8">8°</option>
+            <option value="9">9°</option>
+            <option value="10">10°</option>
+            <option value="11">11°</option>
+        </select>
+    </div>
+
+    <h2>Estudiantes en el Grado Seleccionado</h2>
+    <div id="estudiantesContainer">
+        <div id="estudiantesList"></div>
+
+        <h2>Registrar Nota</h2>
+
+
+        <input type="text" id="nombreEstudiante" placeholder="Nombre estudiante" required>
+        <input type="number" id="nota" placeholder="Nota" required>
+        <select id="materia" name="materia" required>
+            <option value="" disabled selected>Materia</option>
+            <option value="Matematicas">Matemáticas</option>
+            <option value="Sociales">Sociales</option>
+            <option value="Lenguaje">Lenguaje</option>
+            <option value="Ingles">Inglés</option>
+            <option value="Naturales">Naturales</option>
+        </select>
+
+        <input type="button" class="button" value="Guardar Nota" onclick="guardarNota()">
+    </div>
+
+    <h2>Notas Registradas</h2>
+    <div id="notasRegistradas"></div>
+
+    <footer>
+        <p>&copy; 2024 Gestión de Instituciones Educativas</p>
+    </footer>
+    <script src="../js/server.js"></script>
+</body>
+
+</html>

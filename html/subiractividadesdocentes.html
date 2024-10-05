@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Instituciones Educativas</title>
+    <link rel="stylesheet" href="../css/subiractividadesdocentes.css">
+</head>
+
+<body>
+    <header>
+        <div id="mensaje-bienvenida"></div>
+        <div class="logo">
+            <img src="../img/logo 1.jfif" alt="Logo de Instituciones Educativas">
+            <h1>Docente</h1>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><input type="button" class="submenu" value="Regresar" onclick="regresar3()"></li>
+        </ul>
+    </nav>
+    <h1>Dejar Tarea</h1>
+    <div class="form-container">
+        <form id="tareaForm">
+            <div class="form-group">
+                <label for="titulo">Título de la Tarea:</label>
+                <input type="text" id="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="grado">Grado: </label>
+                <select id="grado" name="grado" required>
+                    <option value="" disabled selected>Selecciona un grado</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fechaEntrega">Fecha de Entrega:</label>
+                <input type="date" id="fechaEntrega" required>
+                <br>
+                <input type="button" class="button" value="Guardar Tarea" onclick="guardarTarea()">
+            </div>
+        </form>
+        
+        <div id="mensaje"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 Gestión de Instituciones Educativas</p>
+    </footer>
+    <script src="../js/server.js"></script>
+</body>
+</html>
